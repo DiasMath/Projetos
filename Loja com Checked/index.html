@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Checked</title>
+
+</head>
+
+<body>
+    
+<h1>Loja</h1>
+
+    <label for="nomeCliente" id="labelNome"> Digite seu nome :</label>
+    <input type="text" id="nomeCliente" placeholder="Seu nome"><br><br>
+
+    <label for="nomeProduto" id="labelProduto"> Digite o Produto :</label>
+    <input type="text" id="nomeProduto" placeholder="Produto"><br><br>
+
+    <label id="textoTipoPagamento">Escolha o tipo de pagamento:
+    </label><br><br>
+
+    <label for="visaBtn" id="labelVisa" >Visa</label>
+    <input type="radio" name="pagamento" id="visaBtn">
+
+    <label for="masterCardBtn" id="labelmasterCard">MasterCard</label>
+    <input type="radio" name="pagamento" id="masterCardBtn">
+
+    <label for="payPalBtn" id="labelPayPal">PayPal</label>
+    <input type="radio" name="pagamento" id="payPalBtn">
+    <br><br>
+    <button type="submit" id="botaoEnviar"> Enviar</button>
+    <br><br><br>
+
+<div id="resumoPedido">
+
+    <h2>Resumo do pedido</h2>
+
+    <label id="resultadoNome"></label><br>
+    <label id="resultadoProduto"></label><br>
+    <label id="resultadoPagamento"></label><br><br>
+    <button type="button" id="refreshBtn" onClick = "recarregarPagina()">Refresh</button>
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

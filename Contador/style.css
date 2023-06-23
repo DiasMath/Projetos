@@ -1,0 +1,30 @@
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size:80px;
+
+}
+
+#titulo{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+#botoes{
+    text-align: center;
+    justify-content: space-around;
+       
+
+}
+
+#fundo{
+    background-color: gray;
+
+
+}
+
+
+
+
