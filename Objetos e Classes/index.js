@@ -210,3 +210,128 @@ const peixe01 = new Peixe("beta", 2, 100);
 console.log(peixe01.nome);
 console.log(peixe01.idade);
 console.log(peixe01.velocidade);
+
+console.log("-----------------------------------------------");
+
+
+// ### GET e SET ### //
+
+// get - prop para a funcao quando a funcao e acessada.
+// set - prop para a funcao quando e atribuido um valor para a prop.
+
+class Navio {
+
+    constructor(potencia){
+        this._potencia = potencia;
+        this._gas = 250;
+    }
+    get potencia(){
+        return `${this._potencia} de potencia`;
+    }
+
+    get gas(){
+        return `${this._gas}L (${this._gas / 500 * 100})%`;
+    }
+
+    set gas(value){
+        if(value>500){
+            value = 500;
+        }
+        else if(value<0){
+            value = 0;
+        }
+    
+    this._gas = value;
+
+    }
+}
+
+let navio = new Navio(300);
+console.log(navio.potencia);
+
+navio.gas = 250;
+console.log(navio.gas);
+
+
+console.log("-----------------------------------------------");
+
+
+// ### OBJETOS COMO ARGS ### //
+
+class Aviao {
+
+    constructor(modelo,ano,cor){
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+    }
+}
+
+let aviao = new Aviao("Boeing",1980,"Vinho");
+
+function mudarCor(aviao,cor){
+    aviao.cor = cor;
+}
+
+mudarCor(aviao,"preto");
+
+function mostrarAviao(nickAviao){
+    console.log(nickAviao.modelo);
+    console.log(nickAviao.ano);
+    console.log(nickAviao.cor);
+}
+
+mostrarAviao(aviao);
+
+
+console.log("-----------------------------------------------");
+
+
+// ### ARRAY DE OBJETO ### //
+
+class Moto {
+
+    constructor(modelo,ano,cor){
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+    }
+    Dirigir(){
+        console.log(`voce esta dirigindo ${this.modelo}`)
+    }
+}
+
+const moto1 = new Moto("Fazer",2021,"Vermelho");
+const moto2 = new Moto("Ninja",2019,"Preto");
+const moto3 = new Moto("LXW",2024,"Azul");
+const moto4 = new Moto("XJ",2015,"Roxo");
+
+const Motos = [moto1, moto2, moto3, moto4];
+
+console.log(Motos[0].modelo);
+Motos[1].Dirigir();
+
+function corrida(){
+    for(const moto of Motos){
+        console.log(moto.cor);
+        moto.Dirigir();
+    }
+}
+
+corrida(Motos);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
