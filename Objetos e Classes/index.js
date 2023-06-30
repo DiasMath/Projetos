@@ -128,3 +128,114 @@ const fruta3 = new Mercado("Manga");
 Mercado.pegar();
 
 console.log(Mercado.numeroCompras);
+
+
+console.log("-----------------------------------------------");
+
+
+// ### HERANCA ### //
+
+// um classe filho herda os metodos e propriedades de uma classe pai
+
+class Animal {
+
+    vivo = true;
+    comer(){
+        console.log(`o animal ${this.name} esta comendo`);
+    }
+}
+
+class coelho extends Animal {
+
+    name = "Coelho";
+    pular(){
+        console.log(`o ${this.name} esta pulando`);
+    }
+}
+
+class peixe extends Animal {
+
+    name = "Peixe";
+    nadar(){
+        console.log(`o ${this.name} esta nadando`);
+    }
+}
+
+class falcao extends Animal {
+
+    name = "Falcao";
+    voar(){
+        console.log(`o ${this.name} esta voando`);
+    }
+}
+
+const coelho1 = new coelho;
+const peixe1 = new peixe;
+const falcao1 = new falcao;
+
+console.log(coelho.name);
+console.log(peixe1.name);
+console.log(falcao1.name);
+
+console.log(coelho1.vivo);
+peixe1.comer();
+falcao1.voar();
+
+console.log("-----------------------------------------------");
+
+
+// ### SUPER ### //
+
+// se refere a classe pai. Usado para invocar o constructor da classe pai
+
+class Animal1 {
+
+    constructor(nome,idade) {
+        this.nome = nome;
+        this.idade = idade;
+
+    }
+}
+
+class Peixe extends Animal1 {
+
+    constructor(name,idade,velocidade){
+        super(name,idade);
+        this.velocidade = velocidade;
+    }
+}
+
+const peixe01 = new Peixe("beta", 2, 100);
+
+console.log(peixe01.nome);
+console.log(peixe01.idade);
+console.log(peixe01.velocidade);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
